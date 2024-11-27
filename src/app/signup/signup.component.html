@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="mx-auto col-6 p-3 shadow">
+        <h3 class="text-center text-success">Signup Form </h3>
+
+        <form [formGroup]="formone">
+            <input type="text" placeholder="Firstname" name="fname" class="form-control my-2" formControlName="firstname" [class.is-valid]="formone.get('firstname')?.valid && formone.get('firstname')?.dirty" [class.is-invalid]="formone.get('firstname')?.invalid && formone.get('firstname')?.dirty">
+            <input type="text" placeholder="Lastname" name="lname" class="form-control my-2" formControlName="lastname" [class.is-valid]="formone.get('lastname')?.valid && formone.get('lastname')?.dirty" [class.is-invalid]="formone.get('lastname')?.invalid && formone.get('lastname')?.dirty">
+            <input type="text" placeholder="email" name="email" class="form-control my-2" formControlName="email" [class.is-valid]="formone.get('email')?.valid && formone.get('email')?.dirty" [class.is-invalid]="formone.get('email')?.invalid && formone.get('email')?.dirty">
+            <input type="text" placeholder="password" name="password" class="form-control my-2" formControlName="password" [class.is-valid]="formone.get('password')?.valid && formone.get('password')?.dirty" [class.is-invalid]="formone.get('password')?.invalid && formone.get('password')?.dirty">
+            <input type="text" placeholder="phonenumber" name="phonenumber" class="form-control my-2" formControlName="phonenumber" [class.is-valid]="formone.get('phonenumber')?.valid && formone.get('phonenumber')?.dirty" [class.is-invalid]="formone.get('phonenumber')?.invalid && formone.get('phonenumber')?.dirty">
+
+            <label for="confirm">Select Account type</label>
+            <select class="form-select my-2" id="class" name="class" formControlName="acctype">
+                <option value="savings">Savings</option>
+                <option value="current">Current</option>
+                <option value="fixed">Fixed</option>
+              </select>
+           
+            <input type="number" placeholder="age" name="agee" class="form-control my-2" formControlName="age" [class.is-valid]="formone.get('age')?.valid && formone.get('age')?.dirty" [class.is-invalid]="formone.get('age')?.invalid && formone.get('age')?.dirty">
+            <div class="form-check" >
+                <input type="checkbox" class="form-check-input" name="check"  formControlName="check">
+            </div>
+            <button [disabled]="formone.invalid || !formone.get('check')?.value " (click)='submit()' class="btn btn-outline-success">Submit</button>
+
+            <h5 class="text-center text-danger">{{msg}}</h5>
+            
+        </form>
+    </div>
+</div>

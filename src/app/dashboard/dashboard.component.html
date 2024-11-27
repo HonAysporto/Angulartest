@@ -1,0 +1,37 @@
+
+
+<div class="container mt-5">
+
+    <div class="text-center mb-4">
+      <h1 class="display-5">Bank Dashboard</h1>
+      <p class="lead">Welcome to your account overview</p>
+    </div>
+
+  
+    <div class="card shadow">
+      <div class="card-body">
+        <h5 class="card-title text-primary">Welcome: {{ customer.firstname }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Customer Details</h6>
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>First Name:</strong> {{ customer.firstname }}</p>
+            <p><strong>Last Name:</strong> {{ customer.lastname }}</p>
+            <p><strong>Last Name:</strong> {{ customer.phonenumber }}</p>
+
+          </div>
+          <div class="col-md-6">
+            <p><strong>Email:</strong> {{ customer.email }}</p>
+            <p><strong>Account ID:</strong> {{ customer.id }}</p>
+            <p><strong>Age:</strong> {{ customer.age }}</p>
+          </div>
+        </div>
+        <hr>
+        <h3 class="text-success text-center">Account Information</h3>
+        <p class="text-center"><strong>Account Number:</strong> {{ customer.accountnumber }}</p>
+        <p class="text-center"><strong>Account Name:</strong> {{ customer.firstname }} {{ customer.lastname }}</p>
+        <p class="text-center"><strong>Account Type:</strong> {{ customer.acctype }}</p>
+        <p class="text-center"><strong>Current Available Balance:</strong> {{ customer.balance }}</p>
+        
+      </div>
+    </div>
+  </div>
