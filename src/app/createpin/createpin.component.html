@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="mx-auto shadow p-3 ">
+        <h3>Create transfer pin</h3>
+
+        <input type="text" placeholder="Enter transfer pin" [(ngModel)]="pin" class="form-control">
+        <button (click)="save()" class="btn btn-outline-success">Save</button>
+        <h5 class="text-center text-success">{{msg}}</h5>
+    </div>
+</div>

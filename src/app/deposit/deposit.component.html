@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="mx-auto col-6 p-3 shadow">
+        <h4 class="text-center text-success">Deposit Money</h4>
+
+        <input type="text" placeholder="Enter Amount to be deposited" class="form-control" [(ngModel)]="money">
+        
+        <button (click)="deposit()">deposit</button>
+        <h5 class="text-center text-success">{{msg}}</h5>
+    </div>
+</div>

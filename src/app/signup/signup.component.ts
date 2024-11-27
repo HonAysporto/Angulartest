@@ -63,6 +63,7 @@ ngOnInit() {
       accountnumber : this.generateaccountnumber(),
       id: this.generateuser(),
       balance: 0,
+      transferpin: ''
     }
 
     // console.log(user);
